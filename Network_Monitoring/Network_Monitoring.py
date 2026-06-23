@@ -16,7 +16,7 @@ def check_ping(ip):
         writer = csv.writer(file)
         writer.writerow([ip, status, time.strftime('%Y-%m-%d %H:%M:%S')])
     
-    print(f'{ip} está {status}')
+    print(f'{ip} this {status}')
 
 # Função para monitoramento com multiprocessing
 def monitor_computers():
