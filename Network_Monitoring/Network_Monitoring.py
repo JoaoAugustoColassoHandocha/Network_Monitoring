@@ -14,7 +14,7 @@ def verificar_ping(ip):
     # Armazenar o status em um arquivo CSV
     with open('monitoramento.csv', mode='a', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow([ip, status, time.strftime("%Y-%m-%d %H:%M:%S")])
+        writer.writerow([ip, status, time.strftime('%Y-%m-%d %H:%M:%S')])
     
     print(f"{ip} está {status}")
 
