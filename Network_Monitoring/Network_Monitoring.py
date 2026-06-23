@@ -26,4 +26,4 @@ def monitor_computers():
 # Monitor periodically
 while True:
     monitor_computers()
-    time.sleep(60)  # Verifica a cada 60 segundos
+    time.sleep(60)  # Check every 60 seconds
