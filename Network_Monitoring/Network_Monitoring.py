@@ -3,8 +3,8 @@ import time
 import multiprocessing
 import csv
 
-# Lista de IPs ou hostnames dos 800 computadores
-computadores = [f'0.0.0.{i}' for i in range(2, 802)]  # Exemplo de IPs
+# List of IP addresses or hostnames of 100 computers.
+computadores = [f'0.0.0.{i}' for i in range(2, 102)]  # Exemplo de IPs
 
 # Função para pingar um computador
 def verificar_ping(ip):
