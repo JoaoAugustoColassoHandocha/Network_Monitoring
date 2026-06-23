@@ -23,7 +23,7 @@ def monitor_computers():
     with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
         pool.map(check_ping, computers)
 
-# Monitorar periodicamente
+# Monitor periodically
 while True:
     monitor_computers()
     time.sleep(60)  # Verifica a cada 60 segundos
