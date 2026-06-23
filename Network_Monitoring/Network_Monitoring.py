@@ -11,7 +11,7 @@ def check_ping(ip):
     response = os.system(f'ping -n 1 -W 1000 {ip}')
     status = 'online' if response == 0 else 'offline'
     
-    # Armazenar o status em um arquivo CSV
+    # Store the status in a CSV file.
     with open('monitoramento.csv', mode='a', newline='') as file:
         writer = csv.writer(file)
         writer.writerow([ip, status, time.strftime('%Y-%m-%d %H:%M:%S')])
