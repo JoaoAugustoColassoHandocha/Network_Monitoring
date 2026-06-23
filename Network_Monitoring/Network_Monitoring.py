@@ -18,7 +18,7 @@ def check_ping(ip):
     
     print(f'{ip} this {status}')
 
-# Função para monitoramento com multiprocessing
+# Function for monitoring with multiprocessing.
 def monitor_computers():
     with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
         pool.map(check_ping, computadores)
