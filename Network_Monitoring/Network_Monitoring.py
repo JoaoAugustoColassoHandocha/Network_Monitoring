@@ -4,10 +4,10 @@ import multiprocessing
 import csv
 
 # List of IP addresses or hostnames of 100 computers.
-computadores = [f'0.0.0.{i}' for i in range(2, 102)]  # Exemplo de IPs
+computers = [f'0.0.0.{i}' for i in range(2, 102)]  # Example of IPs
 
-# Função para pingar um computador
-def verificar_ping(ip):
+# Function to ping a computer
+def check_ping(ip):
     response = os.system(f'ping -n 1 -W 1000 {ip}')
     status = 'online' if response == 0 else 'offline'
     
@@ -19,11 +19,11 @@ def verificar_ping(ip):
     print(f'{ip} está {status}')
 
 # Função para monitoramento com multiprocessing
-def monitorar_computadores():
+def monitor_computers():
     with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
-        pool.map(verificar_ping, computadores)
+        pool.map(check_ping, computadores)
 
 # Monitorar periodicamente
 while True:
-    monitorar_computadores()
+    monitor_computers()
     time.sleep(60)  # Verifica a cada 60 segundos
