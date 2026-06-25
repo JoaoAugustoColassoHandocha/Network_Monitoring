@@ -3,11 +3,8 @@ import time
 import multiprocessing
 import csv
 
-request_ip = input('Insira as 3 primeiras camadas do IP (Ex: 0.0.0): ')
-equipment_quantity = int(input('Quantidade de equipamentos: '))
-
 # List of IP addresses or hostnames of 100 computers.
-computers = [f'{request_ip}.{i}' for i in range(2, equipment_quantity + 1)]  # Example of IPs
+computers = [f'0.0.0.{i}' for i in range(2, 103)]  # Example of IPs
 
 # Creation of the CSV file.
 with open('NetworkMonitoring.csv', mode='w', newline='') as file:
