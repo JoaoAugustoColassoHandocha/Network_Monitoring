@@ -3,7 +3,7 @@ import time
 import multiprocessing
 import csv
 
-request_ip = int(input('Insira as 3 primeiras camadas do IP (Ex: 0.0.0): '))
+request_ip = input('Insira as 3 primeiras camadas do IP (Ex: 0.0.0): ')
 equipment_quantity = int(input('Quantidade de equipamentos: '))
 
 # List of IP addresses or hostnames of 100 computers.
