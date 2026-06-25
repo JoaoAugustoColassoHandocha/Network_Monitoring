@@ -3,8 +3,12 @@ import time
 import multiprocessing
 import csv
 
+ip = input('Insira as 3 primeiras camadas do IP: ')
+qtd = int(input('Insira a quantidades de equipamentos: '))
+
+
 # List of IP addresses or hostnames of 100 computers.
-computers = [f'0.0.0.{i}' for i in range(2, 5)]  # Example of IPs
+computers = [f'{ip}.{i}' for i in range(2, qtd + 1)]  # Example of IPs
 
 # Function to ping a computer.
 def check_ping(ip):
