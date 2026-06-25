@@ -8,12 +8,13 @@ computers = [f'0.0.0.{i}' for i in range(2, 103)]  # Example of IPs
 
 # Function to ping a computer
 def check_ping(ip):
-    response = os.system(f'ping -n 1 -W 1000 {ip}')
-    status = 'Online' if response == 0 else 'Offline'
     
-    with open('NetworkMonitoring.csv', mode='a', newline='') as file:
+    with open('NetworkMonitoring.csv', mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(['IP','STATUS', 'DATE | TIME'])
+    
+    response = os.system(f'ping -n 1 -W 1000 {ip}')
+    status = 'Online' if response == 0 else 'Offline'
     
     # Store the status in a CSV file.
     with open('NetworkMonitoring.csv', mode='a', newline='') as file:
