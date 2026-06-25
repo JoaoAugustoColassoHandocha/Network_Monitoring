@@ -6,11 +6,6 @@ import csv
 # List of IP addresses or hostnames of 100 computers.
 computers = [f'0.0.0.{i}' for i in range(2, 5)]  # Example of IPs
 
-# Creation of the CSV file.
-with open('NetworkMonitoring.csv', mode='w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(['IP','STATUS', 'DATE | TIME'])
-
 # Function to ping a computer.
 def check_ping(ip):
     
@@ -26,6 +21,12 @@ def check_ping(ip):
 
 # Function for monitoring with multiprocessing.
 def monitor_computers():
+    
+    # Creation of the CSV file.
+    with open('NetworkMonitoring.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['IP','STATUS', 'DATE | TIME'])
+    
     with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
         pool.map(check_ping, computers)
 
