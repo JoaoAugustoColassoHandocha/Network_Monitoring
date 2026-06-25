@@ -4,7 +4,7 @@ import multiprocessing
 import csv
 
 # List of IP addresses or hostnames of 100 computers.
-computers = [f'0.0.0.{i}' for i in range(2, 103)]  # Example of IPs
+computers = [f'0.0.0.{i}' for i in range(2, 5)]  # Example of IPs
 
 # Creation of the CSV file.
 with open('NetworkMonitoring.csv', mode='w', newline='') as file:
