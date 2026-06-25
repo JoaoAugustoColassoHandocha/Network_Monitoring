@@ -3,7 +3,7 @@ import time
 import multiprocessing
 import csv
 
-ip_request = input('Insira as 3 primeiras camadas do IP: ')
+ip_request = input('Insira as 3 primeiras camadas do IP (Ex: 0.0.0): ')
 equipment_quantity = int(input('Insira a quantidades de equipamentos: '))
 
 
