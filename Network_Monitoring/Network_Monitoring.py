@@ -15,7 +15,7 @@ def check_ping(ip):
     with open('NetworkMonitoring.csv', mode='a', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(['IP','STATUS', 'DATE | TIME']) 
-        writer.writerow([ip, status, time.strftime('%Y-%m-%d %H:%M:%S')])
+        writer.writerow([ip, status, time.strftime('%Y-%m-%d | %H:%M:%S')])
     
     print(f'{ip} this {status}')
 
