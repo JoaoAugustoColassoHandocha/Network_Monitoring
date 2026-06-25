@@ -4,7 +4,7 @@ import multiprocessing
 import csv
 
 # List of IP addresses or hostnames of 100 computers.
-computers = [f'0.0.0.{i}' for i in range(2, 102)]  # Example of IPs
+computers = [f'0.0.0.{i}' for i in range(2, 103)]  # Example of IPs
 
 # Function to ping a computer
 def check_ping(ip):
