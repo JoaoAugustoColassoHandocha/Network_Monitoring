@@ -4,7 +4,7 @@ import multiprocessing
 import csv
 
 ip = input('Insira as 3 primeiras camadas do IP: ')
-qtd = int(input('Insira a quantidades de equipamentos: '))
+equipment_quantity = int(input('Insira a quantidades de equipamentos: '))
 
 
 # List of IP addresses or hostnames of 100 computers.
