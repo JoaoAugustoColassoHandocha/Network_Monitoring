@@ -8,7 +8,7 @@ equipment_quantity = int(input('Insira a quantidades de equipamentos: '))
 
 
 # List of IP addresses or hostnames of 100 computers.
-computers = [f'{ip}.{i}' for i in range(2, qtd + 1)]  # Example of IPs
+computers = [f'{ip}.{i}' for i in range(2, equipment_quantity + 1)]  # Example of IPs
 
 # Function to ping a computer.
 def check_ping(ip):
