@@ -46,3 +46,4 @@ def monitor_computers():
 while True:
     monitor_computers()
     time.sleep(60)  # Check every 60 seconds.
+    os.system('cls' if os.name == 'nt' else 'clear')
