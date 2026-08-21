@@ -9,8 +9,8 @@ import multiprocessing
 import csv
 
 # Request for information
-ip_request = input('Insira as 3 primeiras camadas do IP (Ex: 0.0.0): ')
-equipment_quantity = int(input('Insira a quantidades de equipamentos: '))
+ip_request = input('\nInsira as 3 primeiras camadas do IP (Ex: 0.0.0): ')
+equipment_quantity = int(input('\nInsira a quantidades de equipamentos: '))
 
 
 # List of IP addresses or hostnames of 100 computers.
