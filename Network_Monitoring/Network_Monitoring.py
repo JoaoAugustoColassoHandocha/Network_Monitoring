@@ -12,6 +12,8 @@ import csv
 ip_request = input('\nInsira as 3 primeiras camadas do IP (Ex: 0.0.0): ')
 equipment_quantity = int(input('\nInsira a quantidades de equipamentos: '))
 
+os.system('cls' if os.name == 'nt' else 'clear')
+
 
 # List of IP addresses or hostnames of 100 computers.
 computers = [f'{ip_request}.{i}' for i in range(2, equipment_quantity + 2)]  # Example of IPs
